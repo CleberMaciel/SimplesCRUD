@@ -14,6 +14,7 @@ class Pessoa extends CI_Controller {
         $data['titulo'] = "Cadastro de Pessoas";
         $data['pessoas'] = $this->model->listarPessoas();
         $this->load->view('pessoa', $data);
+        $this->load->view('template/footer');
     }
 
     function inserir() {

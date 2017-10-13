@@ -1,31 +1,30 @@
-<html lang="pt_br">
+<!DOCTYPE html>
+<html>
+
     <head>
-        <meta charset="UTF-8">
+        <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>Lista de Pessoas</title>
-
-        <?php
-        echo meta(array('name' => 'viewport', 'content' => 'width=device-width, initial-scale=1.0')) .
-        link_tag('assets/css/semantic.min.css') .
-        link_tag('assets/css/estilos.css') .
-        link_tag('assets/css/icon.min.css');
-        ?>
-        <script src="<?php echo base_url('assets/js/jquery.min.js') ?>"></script>
-        <script src="<?php echo base_url('assets/js/semantic.min.js') ?>"></script>
-
+        <title>Cadastros</title>
+        <link rel="stylesheet" href="<?php echo base_url('assets/bootstrap/css/bootstrap.min.css') ?>">
+        <link rel="stylesheet" href="<?php echo base_url('https://fonts.googleapis.com/css?family=Roboto:400,500,700') ?>">
+        <link rel="stylesheet" href="<?php echo base_url('assets/fonts/ionicons.min.css') ?>">
+        <link rel="stylesheet" href="<?php echo base_url('assets/css/Data-Table.css') ?>">
+        <link rel="stylesheet" href="<?php echo base_url('assets/css/Data-Table1.css') ?>">
+        <link rel="stylesheet" href="<?php echo base_url('assets/css/Footer-Clean.css') ?>">
+        <link rel="stylesheet" href="<?php echo base_url('https://cdn.datatables.net/1.10.15/css/dataTables.bootstrap.min.css') ?>">
+        <link rel="stylesheet" href="<?php echo base_url('assets/css/styles.css') ?>">
     </head>
     <body>
-        <div class="ui fixed inverted menu">
-            <div class="ui container">
-                <a href="#" class="header item">
-
-                    CadListP
-                </a>
-                <a href="#" class="item">:)</a>
+        <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header"><a class="navbar-brand navbar-link" href="#">Cadastros </a>
+                    <button class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+                </div>
+                <div class="collapse navbar-collapse" id="navcol-1">
+                    <ul class="nav navbar-nav">
+                        <li role="presentation"><a href="#">Home </a></li>
+                        <li role="presentation"><a href="#">Lista de pessoas</a></li>
+                    </ul>
+                </div>
             </div>
-        </div>
-        <br>
-        <br>
-        <br>
-        <br>
+        </nav>
