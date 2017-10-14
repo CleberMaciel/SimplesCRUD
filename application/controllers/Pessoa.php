@@ -23,17 +23,23 @@ class Pessoa extends CI_Controller {
         $data['sobrenome'] = $this->input->post('sobrenome');
 
         /* Chama a função inserir do modelo */
-        if ($this->model->inserir($data)) {
+        $result = $this->model->inserir($data);
+        if ($result == true) {
+            $this->session->set_flashdata('true', 'msg');
             redirect('pessoa');
         } else {
+            $this->session->set_flashdata('err', 'msg');
             redirect('pessoa');
         }
     }
 
     function excluir($id) {
-        if ($this->model->deletar($id)) {
+        $result = $this->model->deletar($id);
+        if ($result == true) {
+            $this->session->set_flashdata('true', 'msg');
             redirect('pessoa');
         } else {
+            $this->session->set_flashdata('err', 'msg');
             redirect('pessoa');
         }
     }

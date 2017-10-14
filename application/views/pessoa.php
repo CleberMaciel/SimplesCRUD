@@ -1,5 +1,6 @@
 <div>
     <div class="container">
+
         <div class="row" style="padding-top:18px;">
             <div class="col-lg-offset-4 col-lg-push-0 col-md-4 col-md-offset-2 col-md-pull-0">
                 <?php echo form_open('pessoa/inserir', 'id="form-usuario"', 'class="ui large form"'); ?>
@@ -41,7 +42,7 @@
                                     <td><?php echo $p->sobrenome ?></td>
                                     <td><a class="btn btn-danger btn-sm" role="button" href="<?php echo base_url() . 'pessoa/excluir/' . $p->id; ?>">Excluir </a></td>
                                 </tr>
-                                <?php endforeach; ?>
+                            <?php endforeach; ?>
                         </tbody>
 
                     </table>
