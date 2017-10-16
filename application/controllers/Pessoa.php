@@ -44,4 +44,25 @@ class Pessoa extends CI_Controller {
         }
     }
 
+    function editar_pessoas($id) {
+        $data['pessoa_editar'] = $this->model->editar($id);
+        $this->load->view('template/header');
+        $this->load->view('editar_pessoa', $data);
+        $this->load->view('template/footer');
+    }
+
+    function atualizar_pessoa() {
+        $data['id'] = $this->input->post('id');
+        $data['nome'] = $this->input->post('nome');
+        $data['sobrenome'] = $this->input->post('sobrenome');
+
+        if ($this->model->atualizar($data) == true) {
+            $this->session->set_flashdata('true', 'msg');
+            redirect('pessoa');
+        } else {
+            $this->session->set_flashdata('err', 'msg');
+            redirect('pessoa');
+        }
+    }
+
 }

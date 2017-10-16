@@ -31,16 +31,16 @@
                             <tr>
                                 <th>Nome </th>
                                 <th>Sobrenome </th>
-                                <th>Função </th>
+                                <th>Funções </th>
                             </tr>
                         </thead>
-
                         <tbody>
                             <?php foreach ($pessoas as $p): ?>
                                 <tr>
                                     <td><?php echo $p->nome ?></td>
                                     <td><?php echo $p->sobrenome ?></td>
                                     <td><a class="btn btn-danger btn-sm" role="button" href="<?php echo base_url() . 'pessoa/excluir/' . $p->id; ?>">Excluir </a></td>
+                                    <td><a class="btn btn-danger btn-sm" role="button" href="<?php echo base_url() . 'pessoa/editar_pessoas/' . $p->id; ?>">Editar </a></td>
                                 </tr>
                             <?php endforeach; ?>
                         </tbody>

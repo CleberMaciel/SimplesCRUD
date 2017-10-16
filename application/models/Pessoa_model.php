@@ -22,4 +22,16 @@ class Pessoa_model extends CI_Model {
         return $lista->result();
     }
 
+    function editar($id) {
+        $this->db->where('id', $id);
+        $result = $this->db->get('pessoas');
+        return $result->result();
+    }
+
+    function atualizar($data) {
+        $this->db->where('id', $data['id']);
+        $this->db->set($data);
+        return $this->db->update('pessoas');
+    }
+
 }
